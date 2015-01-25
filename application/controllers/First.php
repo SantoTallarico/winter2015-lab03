@@ -13,4 +13,10 @@
  */
 class First extends Application {
     //put your code here
+    
+    public function zzz() {
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->first());
+        $this->render();
+    }
 }
