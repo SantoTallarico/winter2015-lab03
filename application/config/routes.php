@@ -41,11 +41,11 @@
 $route['default_controller'] = "welcome";
 $route['last'] = "last/last";
 $route['sleep'] = "first/zzz";
-$route['lock/(:all)/(:all)'] = "welcome/shucks";
+$route['lock/(:any)/(:any)'] = "welcome/shucks";
 $route['show/(:num)'] = "first/gimme/$1";
 $route['dunno'] = "guess";
-$route['wise/bingo'] = "bingo";
-$route['comp4711/wisdom'] = "bingo/wisdom";
+$route['([A-Za-z]{4})/bingo'] = "bingo";
+$route['(comp[0-9]+)/wisdom'] = "bingo/wisdom";
 $route['404_override'] = '';
 
 
