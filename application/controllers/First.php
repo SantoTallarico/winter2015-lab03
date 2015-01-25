@@ -14,9 +14,21 @@
 class First extends Application {
     //put your code here
     
-    public function zzz() {
+    function index() {
         $this->data['pagebody'] = 'justone';
         $this->data = array_merge($this->data, $this->quotes->first());
+        $this->render();
+    }
+    
+    function zzz() {
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->get(1));
+        $this->render();
+    }
+    
+    function gimme($index) {
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->get($index));
         $this->render();
     }
 }

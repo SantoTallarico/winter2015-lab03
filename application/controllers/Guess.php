@@ -13,4 +13,10 @@
  */
 class Guess extends Application {
     //put your code here
+    
+    function index() {
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->get(4));
+        $this->render();
+    }
 }

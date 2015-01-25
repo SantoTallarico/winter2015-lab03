@@ -39,8 +39,9 @@
 */
 
 $route['default_controller'] = "welcome";
+$route['last'] = "last/last";
 $route['sleep'] = "first/zzz";
-$route['lock/(:all)'] = "welcome/shucks";
+$route['lock/(:all)/(:all)'] = "welcome/shucks";
 $route['show/(:num)'] = "first/gimme/$1";
 $route['dunno'] = "guess";
 $route['wise/bingo'] = "bingo";

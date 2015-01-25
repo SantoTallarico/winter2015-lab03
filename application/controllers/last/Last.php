@@ -13,4 +13,10 @@
  */
 class Last extends Application {
     //put your code here
+    
+    function index() {
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->last());
+        $this->render();
+    }
 }
